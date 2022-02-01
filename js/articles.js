@@ -44,6 +44,8 @@ let pageSlider = new Swiper('.page',{
 })
 new Swiper('.posts-slider',{
     slidesPerView: 3,
+    speed: 600,
+    loop: true,
     pagination: {
         el: '.posts-slider__pagination',
         type: 'bullets',
@@ -54,11 +56,11 @@ new Swiper('.posts-slider',{
         prevEl: '.posts-slider__prev'
     },
     breakpoints: {
-        480: {
+        500: {
             slidesPerView: 1,
             spaceBetween: 10,
         },
-        600: {
+        700: {
             slidesPerView: 2,
             spaceBetween: 20,
         },
