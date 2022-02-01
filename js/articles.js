@@ -8,7 +8,7 @@ let pageSlider = new Swiper('.page',{
     slideClass: "page__screen",
     direction: 'vertical',
     slidesPerView: 'auto',
-    parallax: true,
+    slideToClickedSlide: false,
     keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -17,10 +17,7 @@ let pageSlider = new Swiper('.page',{
     mousewheel: {
         sensitivity: 1,
     },
-    watchOverflow: true,
     speed: 800,
-    observer: true,
-    observeParents: true,
     pagination: {
         el: '.page__pagination',
         type: 'bullets',
@@ -56,11 +53,11 @@ new Swiper('.posts-slider',{
         prevEl: '.posts-slider__prev'
     },
     breakpoints: {
-        500: {
+        320: {
             slidesPerView: 1,
             spaceBetween: 10,
         },
-        700: {
+        600: {
             slidesPerView: 2,
             spaceBetween: 20,
         },
