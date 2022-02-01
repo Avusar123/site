@@ -42,7 +42,6 @@ let pageSlider = new Swiper('.page',{
 new Swiper('.posts-slider',{
     slidesPerView: 3,
     speed: 600,
-    loop: true,
     pagination: {
         el: '.posts-slider__pagination',
         type: 'bullets',
