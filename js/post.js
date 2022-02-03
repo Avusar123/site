@@ -6,6 +6,8 @@ var body = document.querySelector('body')
 var tabs = document.querySelectorAll('.tab')
 var sidebar = document.querySelector('.sidebar')
 var tab_links = document.querySelectorAll('.recommended__items > a')
+var attached__files = document.querySelector('.attached-files')
+var attached__filesLink = document.querySelector('.attached-files__link')
 tab_links.forEach(function(e){
     e.addEventListener('click',function(e){
         e.preventDefault()
@@ -36,8 +38,11 @@ burger_menu.addEventListener('click',function(){
     burger_menu.classList.toggle('burger-active')
     body.classList.toggle('locked')
 })
-
+attached__filesLink.addEventListener('click',function(){
+    attached__files.classList.toggle('attached-files-active')
+})
 new Swiper('.news-slider',{
+    watchOverflow: true,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
@@ -46,4 +51,18 @@ new Swiper('.news-slider',{
         el: '.swiper-pagination',
         clickable: true
     },
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    thumbs: {
+        swiper: {
+            el: '.thumbs-slider',
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+            slidesPerView: 5,
+            spaceBetween: 10,
+            slideToClickedSlide: false,
+        }
+    }
 });
