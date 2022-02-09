@@ -1014,3 +1014,13 @@ hr {
 .attached-files-active .attached-files__file {
   margin: 0 0 15px 0;
 }
+
+#post-paralax {
+  padding: 200px 0 0 0;
+  color: black;
+  text-align: left;
+}
+
+#post-paralax main {
+  width: 100%;
+}
