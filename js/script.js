@@ -1,7 +1,3 @@
-window.onscroll = slickscroll
-var header = document.querySelector(".header");
-var burger_menu = document.querySelector('.burger-menu')
-var header = document.querySelector('.header')
 var body = document.querySelector('body')
 var tabs = document.querySelectorAll('.tab')
 var sidebar = document.querySelector('.sidebar')
@@ -23,18 +19,6 @@ tab_links.forEach(function(e){
         var tab_id = target.getAttribute('href')
         document.querySelector(tab_id).classList.add('tab-item-active')
     })
-})
-function slickscroll() {
-    if (window.pageYOffset > header.offsetTop) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-}
-burger_menu.addEventListener('click',function(){
-    header.classList.toggle('header-active')
-    burger_menu.classList.toggle('burger-active')
-    body.classList.toggle('locked')
 })
 
 new Swiper('.news-slider',{

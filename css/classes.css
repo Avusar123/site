@@ -1,0 +1,50 @@
+.classes-main {
+  width: 100%;
+}
+
+.spoiler {
+  margin: 0;
+  width: 100%;
+}
+
+.spoiler__link {
+  font-weight: bold;
+  padding: 15px;
+}
+
+.spoiler__body {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.post {
+  background-color: white;
+}
+
+.post__subtitle {
+  text-align: center;
+  width: 100%;
+}
+
+.spoiler-active .spoiler__link i:last-child {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.spoiler-active .spoiler__body {
+  pointer-events: auto;
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+  margin: 10px 0 0 0;
+  padding: 15px;
+}
+
+.spoiler-active .spoiler__file {
+  margin: 0 0 15px 0;
+}

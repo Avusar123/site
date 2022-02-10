@@ -1,0 +1,43 @@
+.classes-main {
+    width: 100%;
+}
+.spoiler {
+    margin: 0;
+    width: 100%;
+    &__link {
+        font-weight: bold;
+        padding: 15px;
+    }
+    &__body {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+.post {
+    background-color: white;
+    &__subtitle {
+        text-align: center;
+        width: 100%;
+    }
+    &__content-wrapper {
+    }
+}
+.spoiler-active {
+    .spoiler__link {
+        i:last-child {
+            transform: rotate(180deg);
+        }
+    }
+    .spoiler__body {
+        pointer-events: auto;
+        height: auto;
+        visibility: visible;
+        opacity: 1;
+        margin: 10px 0 0 0;
+        padding: 15px;
+    }
+    .spoiler__file {
+        margin: 0 0 15px 0;
+    }
+}

@@ -8,6 +8,7 @@ var sidebar = document.querySelector('.sidebar')
 var tab_links = document.querySelectorAll('.recommended__items > a')
 var attached__files = document.querySelector('.attached-files')
 var attached__filesLink = document.querySelector('.attached-files__link')
+slickscroll()
 tab_links.forEach(function(e){
     e.addEventListener('click',function(e){
         e.preventDefault()
@@ -33,14 +34,33 @@ function slickscroll() {
       header.classList.remove("sticky");
     }
 }
-burger_menu.addEventListener('click',function(){
-    header.classList.toggle('header-active')
-    burger_menu.classList.toggle('burger-active')
-    body.classList.toggle('locked')
-})
-attached__filesLink.addEventListener('click',function(){
-    attached__files.classList.toggle('attached-files-active')
-})
+function cloneToThumbs(slidercls,thumbscls) {
+    var slider = document.querySelector(slidercls + '__wrapper')
+    var thumbs = document.querySelector(thumbscls + '__wrapper')
+    var sliderimgs = slider.querySelectorAll('img')
+    var thumbsimgs = thumbs.querySelectorAll('img')
+    thumbs.innerHTML = ''
+    sliderimgs.forEach(function(img){
+        var slidecnt = document.createElement('div')
+        var imgcnt = document.createElement('div')
+        slidecnt.className = thumbscls.replace('.','') + '__slide' + ' ' + 'swiper-slide'
+        imgcnt.className = thumbscls.replace('.','') + '__img'
+        imgcnt.insertAdjacentElement(
+            'afterbegin',
+            img.cloneNode(true)
+        )
+        slidecnt.insertAdjacentElement(
+            'afterbegin',
+            imgcnt
+        )
+        thumbs.insertAdjacentElement(
+            'afterbegin',
+            slidecnt
+        )
+
+    })
+}
+cloneToThumbs('.news-slider','.thumbs-slider')
 new Swiper('.news-slider',{
     watchOverflow: true,
     navigation: {

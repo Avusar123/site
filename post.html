@@ -17,7 +17,7 @@
 				</div>
 				<ul class="header__menu menu">
 					<li class="menu__link"><a href="index.html">Главная</a></li>
-					<li class="menu__link"><a href="">Классы</a></li>
+					<li class="menu__link"><a href="classes.html">Классы</a></li>
 					<li class="menu__link menu__link_active"><a href="articles.html">Статьи</a></li>
 					<li class="menu__link"><a href="google.com">Авторизоваться</a></li>
 				</ul>
@@ -26,7 +26,7 @@
                 <span></span>
             </div>
 		</header>
-		<section id="post-paralax" class="paralax">
+		<section id="site-paralax" class="paralax">
 			<main class="main">
 				<div class='main__container _container'>
 				<div class="main__sidebar sidebar">
@@ -184,41 +184,6 @@
 						</div>
 						<div class="thumbs-slider swiper">
 							<div class="thumbs-slider__wrapper swiper-wrapper">
-								<div class="thumbs-slider__slide swiper-slide">
-									<div class="thumbs-slider__img">
-										<img src="img/c52dylsc1-g-peter-hershey-520x347.jpg" alt="">
-									</div>
-								</div>
-								<div class="thumbs-slider__slide swiper-slide">
-									<div class="thumbs-slider__img">
-										<img src="img/nastol.com.ua-260809.jpg" alt="">
-									</div>
-								</div>
-								<div class="thumbs-slider__slide swiper-slide">
-									<div class="thumbs-slider__img">
-										<img src="img/c52dylsc1-g-peter-hershey-520x347.jpg" alt="">
-									</div>
-								</div>
-								<div class="thumbs-slider__slide swiper-slide">
-									<div class="thumbs-slider__img">
-										<img src="img/c52dylsc1-g-peter-hershey-520x347.jpg" alt="">
-									</div>
-								</div>
-								<div class="thumbs-slider__slide swiper-slide">
-									<div class="thumbs-slider__img">
-										<img src="img/c52dylsc1-g-peter-hershey-520x347.jpg" alt="">
-									</div>
-								</div>
-								<div class="thumbs-slider__slide swiper-slide">
-									<div class="thumbs-slider__img">
-										<img src="img/c52dylsc1-g-peter-hershey-520x347.jpg" alt="">
-									</div>
-								</div>
-								<div class="thumbs-slider__slide swiper-slide">
-									<div class="thumbs-slider__img">
-										<img src="img/c52dylsc1-g-peter-hershey-520x347.jpg" alt="">
-									</div>
-								</div>
 							</div>
 						</div>
 						<div class="news-slide__wrapper text-wrapper">
@@ -227,22 +192,24 @@
 						</div>
 						<div class="news-slide__title post-title"><a href="">Take a Deep Breath and Just Be</a></div>
 						<div class="news-slide__content post-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores quaerat quod eligendi eveniet! Sit obcaecati, saepe sunt magni ipsam laborum eius unde nesciunt laboriosam libero et quisquam nulla maxime excepturi.</div>
-						<div class="attached-files">
-							<a class="attached-files__link">
-								<i class="fas fa-paperclip"></i> прикрепленные файлы<i class="fas fa-chevron-down"></i>
-							</a>
-							<div class="attached-files__body">
-								<div class="attached-files__file">
-									<div class="attached-files__icon"><i class="fas fa-file"></i></div>
-									<div class="attached-files__filename"><a href="">Lorem ipsum dolor sit amet.</a></div>
-								</div>
-								<div class="attached-files__file">
-									<div class="attached-files__icon"><i class="fas fa-file"></i></div>
-									<div class="attached-files__filename"><a href="">Lorem ipsum dolor sit amet.</a></div>
-								</div>
-								<div class="attached-files__file">
-									<div class="attached-files__icon"><i class="fas fa-file"></i></div>
-									<div class="attached-files__filename"><a href="">Lorem ipsum dolor sit amet.</a></div>
+						<div class="spoiler-container" data-spollers data-one-spoller>
+							<div class="spoiler">
+								<a class="spoiler__link" data-spoller>
+									<i class="fas fa-paperclip"></i> прикрепленные файлы<i class="fas fa-chevron-down"></i>
+								</a>
+								<div class="spoiler__body">
+									<div class="spoiler__file">
+										<div class="spoiler__icon"><i class="fas fa-file"></i></div>
+										<div class="spoiler__filename"><a href="">Lorem ipsum dolor sit amet.</a></div>
+									</div>
+									<div class="spoiler__file">
+										<div class="spoiler__icon"><i class="fas fa-file"></i></div>
+										<div class="spoiler__filename"><a href="">Lorem ipsum dolor sit amet.</a></div>
+									</div>
+									<div class="spoiler__file">
+										<div class="spoiler__icon"><i class="fas fa-file"></i></div>
+										<div class="spoiler__filename"><a href="">Lorem ipsum dolor sit amet.</a></div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -262,6 +229,8 @@
 		</footer>
 	</div>
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/spoiler.js"></script>
     <script src="js/post.js"></script>
 </body>
 </html>

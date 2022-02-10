@@ -708,7 +708,6 @@ hr {
 }
 
 .thumbs-slider {
-    margin: 0 0 20px 0;
     &__wrapper {
     }
 
@@ -735,23 +734,24 @@ hr {
     }
 }
 
-
-.attached-files {
+.spoiler-container {
+    display: flex;
+    align-items: start;
+}
+.spoiler {
     background-color: #0F110E;
     display: block;
-    max-width: 300px;
     margin: 30px 0;
     &__link {
+        display: flex;
         i {
             font-size: 20px;
             margin: 0 10px;
         }
         transition: all 0.3s;
-        display: block;
-        max-width: 300px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         padding: 10px 0;
         cursor: pointer;
         color: white;
@@ -762,27 +762,22 @@ hr {
             transition: all 0.3s;
         }
     }
+    ._active {
+        i:last-child {
+            transform: rotate(180deg);
+        }
+    }
     &__body {
-        display: flex;
-        flex-direction: column;
-        height: 0;
-        visibility: hidden;
-        pointer-events: none;
-        opacity: 0;
-        margin: 0;
-        transition: all 0.3s;
+        padding: 0 0 20px 0;
     }
 
     &__file {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-        margin: 0;
         transition: all 0.3s;
-        cursor: pointer;
+        display: flex;
+        color: white;
+        &:not(:last-child) {
+            margin: 0 0 20px 0;
+        }
         &:active {
             color: #16cfc1;
         }
@@ -797,29 +792,27 @@ hr {
     &__filename {
     }
 }
-
-.attached-files-active {
-    .attached-files__link {
-        i:last-child {
-            transform: rotate(180deg);
-        }
-    }
-    .attached-files__body {
-        pointer-events: auto;
-        height: auto;
-        visibility: visible;
-        opacity: 1;
-        margin: 10px 0 0 0;
-    }
-    .attached-files__file {
-        margin: 0 0 15px 0;
-    }
-}
-#post-paralax {
+#site-paralax {
     padding: 200px 0 0 0;
     color: black;
     text-align: left;
+    .text-wrapper {
+        margin: 20px 0 0 0;
+    }
     main {
         width: 100%;
     }
+    .spoiler {
+        &__body {
+            
+        }
+        &__container {
+            display: flex;
+            gap: 10px;
+            padding: 15px;
+            flex-wrap: wrap;
+        }
+    }
+}
+.classes-main {
 }
