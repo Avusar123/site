@@ -31,7 +31,6 @@ let pageSlider = new Swiper('.page',{
             setScrollType()
         },
         slideChange: function () {
-            setScrollType()
         },
         resize: function() {
             setScrollType()
@@ -80,8 +79,8 @@ function setScrollType() {
                 wrapper.classList.add('_free');
                 pageSlider.params.freeMode = {
                     enabled: true,
-                    minimumVelocity: 0.02,
-                    momentum: false,
+                    minimumVelocity: 1,
+                    momentum: true,
                     momentumBounce: true,
                     momentumBounceRatio: 1,
                     momentumRatio: 1,
