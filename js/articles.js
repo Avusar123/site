@@ -79,7 +79,7 @@ function setScrollType() {
                 wrapper.classList.add('_free');
                 pageSlider.params.freeMode = {
                     enabled: true,
-                    minimumVelocity: 0.5,
+                    minimumVelocity: 0.02,
                     momentum: true,
                     momentumBounce: true,
                     momentumBounceRatio: 1,
