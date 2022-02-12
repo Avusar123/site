@@ -153,20 +153,6 @@ a {
             font-size: 30px;
         }
     }
-    @media (max-width: 591px) {
-        .header {
-            &__logo {
-                font-size: 25px;
-            }
-        }
-    }
-    @media (max-width: 498px) {
-        .header {
-            &__logo {
-                font-size: 25px;
-            }
-        }
-    }
 }
 .sticky {
     top: 0;
@@ -230,7 +216,6 @@ a {
         font-weight: bold;
         font-size: 50px;
     }
-
     &__subtitle {
         font-size: 30px;
         font-family: 'Pacifico';
@@ -312,10 +297,11 @@ a {
         &__container {
         }
         &__logo {
-            flex: 0 0 50%;
+            flex: 0 0 75%;
         }
     }
     .menu {
+        overflow: auto;
         background-color: black;
         position: fixed;
         top: -1000px;
@@ -327,6 +313,7 @@ a {
         height: 100vh;
         left: 0;
         z-index: -1;
+        flex-wrap: nowrap;
     }
     .burger-active {
         right: 25px;
@@ -334,12 +321,10 @@ a {
             transform: scale(0);
         }
         &::before {
-            transform: rotate(45deg);
-            top: 5px;
+            transform: translate(0,5px) rotate(45deg);
         }
         &::after {
-            transform: rotate(-45deg);
-            top: 5px;
+            transform: translate(0,-10px) rotate(-45deg);
         }
     }
     .header-active {
@@ -352,9 +337,9 @@ a {
             }
         }
     }
-    .locked {
-        overflow: hidden;
-    }
+}
+.locked {
+    overflow: hidden;
 }
 .main {
     padding: 0 0 75px 0;
@@ -465,6 +450,7 @@ hr {
     text-transform: uppercase;
     color: #16cfc1;
     font-size: .8125em;
+    transition: color 0.3s;
     &:hover {
         color: #777;
     }
@@ -843,5 +829,113 @@ hr {
         }
     }
 }
-.classes-main {
+.form-auth {
+    transition: all 0.5s;
+    overflow: auto;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    color: black;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__title {
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+        background-color: #16cfc1;
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+    }
+    &__close {
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 20px;
+    }
+    &__body {
+        transition: all 0.5s;
+        position: relative;
+        background-color: rgb(252, 252, 252);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translate(0,-100%);
+    }
+
+    p:last-child {
+        text-align: center;
+        margin: 0 0 30px 0;
+        padding: 0 15px;
+        a {
+            color: #16cfc1;
+            font-weight: bold;
+        }
+    }
+
+    &__input {
+        margin: 15px 0;
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        p {
+            margin: 0 0 5px 0;
+        }
+        input {
+            border-radius: 5px;
+            padding: 0 0 0 15px;
+            height: 30px;
+            outline: none;
+            border: 1px solid #c7c7c7;
+            width: 100%;
+            display: block;
+            transition: all 0.3s;
+            &:focus {
+                box-shadow: 0 0 3px #797979;
+            }
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 10px 50px;
+        margin: 20px 0 30px 0;
+        background-color: #397AFF;
+        color: white;
+        border-radius: 75px;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: black;
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0 0px 0;
+    }
+}
+.form-auth._opened {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    .form-auth__body {
+        transform: translate(0,0);
+    }
 }

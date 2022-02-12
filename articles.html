@@ -20,7 +20,7 @@
 					<li class="menu__link"><a href="index.html">Главная</a></li>
 					<li class="menu__link"><a href="classes.html">Классы</a></li>
 					<li class="menu__link menu__link_active"><a href="articles.html">Статьи</a></li>
-					<li class="menu__link"><a href="">Авторизоваться</a></li>
+					<li class="menu__link"><a href="#form-auth">Авторизоваться</a></li>
 				</ul>
 			</div>
 			<div class="burger-menu">
@@ -572,8 +572,27 @@
 			</div>
 			<div class="page__pagination"></div>
 		</main>
+		<div class="form-auth">
+			<form action="#" class="form-auth__body">
+				<div class="form-auth__close"><i class="fa-solid fa-xmark"></i></div>
+				<div class="form-auth__title">Авторизация</div>
+				<div class="form-auth__input">
+					<p>Логин или почта</p>
+					<input type="text" name="username">
+				</div>
+				<div class="form-auth__input">
+					<p>Пароль</p>
+					<input type="password" name="username">
+				</div>
+				<button type="submit" class="form-auth__button">
+					Войти
+				</button>
+				<p>Нет учетной записи? <a href="#">Зарегестрируйте</a> сейчас!</p>
+			</form>
+		</div>
 	</div>
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 	<script src="js/articles.js"></script>
+	<script src="js/auth.js"></script>
 </body>
 </html>
