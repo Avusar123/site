@@ -31,6 +31,7 @@ let pageSlider = new Swiper('.page',{
             setScrollType()
         },
         slideChange: function () {
+            setScrollType()
         },
         resize: function() {
             setScrollType()

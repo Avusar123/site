@@ -21,7 +21,8 @@ tab_links.forEach(function(e){
     })
 })
 
-new Swiper('.news-slider',{
+var newSlider = new Swiper('.news-slider',{
+    spaceBetween: 50,
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'

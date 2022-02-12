@@ -148,9 +148,23 @@ a {
             font-size: 35px;
         }
     }
-    @media (max-width: 400px) {
+    @media (max-width: 685px) {
         &__logo {
             font-size: 30px;
+        }
+    }
+    @media (max-width: 591px) {
+        .header {
+            &__logo {
+                font-size: 25px;
+            }
+        }
+    }
+    @media (max-width: 498px) {
+        .header {
+            &__logo {
+                font-size: 25px;
+            }
         }
     }
 }
@@ -220,6 +234,13 @@ a {
     &__subtitle {
         font-size: 30px;
         font-family: 'Pacifico';
+        &_green {
+            color: #16cfc1;
+            transition: color 0.3s;
+            &:hover {
+                color: #777;
+            }
+        }
     }
     @media (max-width: 1200px) {
         &__title {
@@ -301,7 +322,6 @@ a {
         transition: top 0.5s;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         width: 100vw;
         height: 100vh;
@@ -325,6 +345,7 @@ a {
     .header-active {
         .menu {
             top: 0;
+            padding: 100px 0 0 0;
             
             li:not(:last-child) {
                 margin: 0 0 30px 0;
@@ -514,6 +535,9 @@ hr {
     > hr {
         margin: 30px 0 30px 0;
     }
+    &_solo {
+        padding: 30px 30px;
+    }
 }
 .news-slider {
     &__wrapper {
@@ -526,6 +550,9 @@ hr {
         justify-content: space-between;
         align-items: center;
         padding: 30px 0 0px 0;
+        &_no-padding {
+            padding: 0;
+        }
     }
     &__arrows {
         display: flex;
@@ -603,7 +630,6 @@ hr {
             object-fit: cover;
         }
     }
-
     &__title {
         font-size: 25px;
     }
@@ -626,6 +652,9 @@ hr {
     &:hover {
         box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.3);
         transform: translate(0,-20px);
+    }
+    @media (max-width: 1440px) {
+        flex: 1 1 45%;
     }
 }
 .load-button {
