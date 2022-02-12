@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/icons-font.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Школьные новости</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class='header__container _container'>
+				<div class="header__logo">
+					<a href=""><span>Школьные</span> Новости</a>
+				</div>
+				<ul class="header__menu menu">
+					<li class="menu__link"><a href="index.html">Главная</a></li>
+					<li class="menu__link"><a href="classes.html">Классы</a></li>
+					<li class="menu__link"><a href="articles.html">Статьи</a></li>
+					<li class="menu__link menu__link_active"><a href="#form-auth">Авторизоваться</a></li>
+				</ul>
+			</div>
+			<div class="burger-menu">
+                <span></span>
+            </div>
+		</header>
+		<section id="site-paralax" class="paralax">
+            <form action="#" class="form-auth__body form-auth_register">
+				<div class="form-auth__title">Регистрация пользователя</div>
+				<div class="form-auth__input">
+					<p>Логин</p>
+					<input type="text" name="username">
+				</div>
+                <div class="form-auth__input">
+					<p>Почта</p>
+					<input type="text" name="username">
+				</div>
+				<div class="form-auth__input">
+					<p>Пароль</p>
+					<input type="password" name="username">
+				</div>
+                <div class="form-auth__input">
+					<p>Повтор пароля</p>
+					<input type="password" name="username">
+				</div>
+                <div class="form-auth__input form-auth__input_checkbox">
+                    <input type="checkbox" name="username">
+					<p>Я даю согласие на обработку персональных данных в соответствии с <a href="#">Условиями</a>.</p>
+				</div>
+				<button type="submit" class="form-auth__button">
+					Отправить
+				</button>
+			</form>
+		</section>
+		<div class="form-auth">
+			<form action="#" class="form-auth__body">
+				<div class="form-auth__close"><i class="fa-solid fa-xmark"></i></div>
+				<div class="form-auth__title">Авторизация</div>
+				<div class="form-auth__input">
+					<p>Логин или почта</p>
+					<input type="text" name="username">
+				</div>
+				<div class="form-auth__input">
+					<p>Пароль</p>
+					<input type="password" name="username">
+				</div>
+				<button type="submit" class="form-auth__button">
+					Войти
+				</button>
+				<p>Нет учетной записи? <a href="register.html">Зарегестрируйте</a> сейчас!</p>
+			</form>
+		</div>
+		<footer class="footer">
+			<div class='footer__container _container'>
+				<div class="footer__logo header__logo">
+					<a href=""><span>Школьные</span> Новости</a>
+				</div>
+				<div class="footer__text">
+					Сайт создан исключительно в информативных целях и не преследует цели извлечения прибыли посредством рекламы или любой другой коммерции
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/auth.js"></script>
+</body>
+</html>

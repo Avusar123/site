@@ -1106,15 +1106,15 @@ hr {
           transform: translate(0, -100%);
 }
 
+.form-auth__body a {
+  color: #16cfc1;
+  font-weight: bold;
+}
+
 .form-auth p:last-child {
   text-align: center;
   margin: 0 0 30px 0;
   padding: 0 15px;
-}
-
-.form-auth p:last-child a {
-  color: #16cfc1;
-  font-weight: bold;
 }
 
 .form-auth__input {
@@ -1131,6 +1131,29 @@ hr {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+}
+
+.form-auth__input_checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.form-auth__input_checkbox p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.form-auth__input_checkbox input {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 30px;
+          flex: 0 0 30px;
+  margin: 0 20px 0 0;
 }
 
 .form-auth__input p {
@@ -1182,6 +1205,13 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 0 0px 0;
+}
+
+.form-auth_register {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  min-width: 50%;
+  margin: 0 0 50px 0;
 }
 
 .form-auth._opened {
