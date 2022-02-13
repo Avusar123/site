@@ -11,7 +11,6 @@ let pageSlider = new Swiper('.page',{
     slidesPerView: 'auto',
     slideToClickedSlide: false,
     touchRatio: 0.7,
-    spaceBetween: 50,
     keyboard: {
         enabled: true,
         onlyInViewport: true,
