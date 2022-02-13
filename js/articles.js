@@ -4,6 +4,7 @@ var burger_menu = document.querySelector('.burger-menu')
 var header = document.querySelector('.header')
 var body = document.querySelector('body')
 let pageSlider = new Swiper('.page',{
+    parallax: true,
     wrapperClass: "page__wrapper",
     slideClass: "page__screen",
     direction: 'vertical',
@@ -18,13 +19,6 @@ let pageSlider = new Swiper('.page',{
         sensitivity: 1,
     },
     speed: 800,
-    pagination: {
-        el: '.page__pagination',
-        type: 'bullets',
-        clickable: true,
-        bulletClass: 'page__bullet',
-        bulletActiveClass: 'page__bullet_active',
-    },
     on: {
         init: function() {
             wrapper.classList.add('_loaded')
