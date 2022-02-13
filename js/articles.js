@@ -10,6 +10,7 @@ let pageSlider = new Swiper('.page',{
     direction: 'vertical',
     slidesPerView: 'auto',
     slideToClickedSlide: false,
+    touchRatio: 0.5,
     keyboard: {
         enabled: true,
         onlyInViewport: true,
@@ -32,33 +33,6 @@ let pageSlider = new Swiper('.page',{
         }
     },
     init: false,
-})
-new Swiper('.posts-slider',{
-    slidesPerView: 3,
-    speed: 600,
-    pagination: {
-        el: '.posts-slider__pagination',
-        type: 'bullets',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.posts-slider__next',
-        prevEl: '.posts-slider__prev'
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        600: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        992: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-        }
-    }
 })
 function setScrollType() {
     if (wrapper.classList.contains('_free')) {
