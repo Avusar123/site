@@ -10,7 +10,8 @@ let pageSlider = new Swiper('.page',{
     direction: 'vertical',
     slidesPerView: 'auto',
     slideToClickedSlide: false,
-    touchRatio: 0.5,
+    touchRatio: 0.7,
+    spaceBetween: 50,
     keyboard: {
         enabled: true,
         onlyInViewport: true,
